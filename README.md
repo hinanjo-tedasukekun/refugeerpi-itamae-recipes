@@ -20,8 +20,9 @@ bundle install --path=vendor/bundle
 
 ### SSH 接続の設定
 
+~/.ssh/config に追記する（なければ作成）。
+
 ```
-# ~/.ssh/config に追記（なければ作成）
 Host refugeerpi2
   Hostname refugeerpi2.local
   User root
