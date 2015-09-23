@@ -28,6 +28,12 @@ Host refugeerpi2
   User root
 ```
 
+### フォントのダウンロード
+
+```bash
+rake download_fonts
+```
+
 ## レシピの適用
 
 ```bash
