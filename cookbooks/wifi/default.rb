@@ -1,1 +1,2 @@
+package 'hostapd'
 package 'dnsmasq'

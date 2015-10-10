@@ -1,1 +1,1 @@
-include_recipe '../cookbooks/dnsmasq/default.rb'
+include_recipe '../cookbooks/wifi/default.rb'
