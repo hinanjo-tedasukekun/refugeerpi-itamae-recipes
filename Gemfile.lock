@@ -1,14 +1,3 @@
-GIT
-  remote: git://github.com/ochaochaocha3/specinfra.git
-  revision: 6f546bb52bed6becc021b5a415e2f60c44a65e6c
-  branch: supports-raspbian
-  specs:
-    specinfra (2.43.11)
-      net-scp
-      net-ssh (~> 2.7)
-      net-telnet
-      sfl
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -26,6 +15,11 @@ GEM
     net-telnet (0.1.1)
     schash (0.1.2)
     sfl (2.2)
+    specinfra (2.44.0)
+      net-scp
+      net-ssh (~> 2.7)
+      net-telnet
+      sfl
     thor (0.19.1)
 
 PLATFORMS
@@ -33,7 +27,7 @@ PLATFORMS
 
 DEPENDENCIES
   itamae
-  specinfra!
+  specinfra (~> 2.44)
 
 BUNDLED WITH
    1.10.6
