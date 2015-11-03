@@ -1,3 +1,5 @@
+# Wi-Fi 設定レシピ
+
 package 'hostapd'
 package 'dnsmasq'
 package 'iw'
