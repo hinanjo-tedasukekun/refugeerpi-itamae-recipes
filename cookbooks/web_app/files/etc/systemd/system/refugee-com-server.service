@@ -1,0 +1,13 @@
+[Unit]
+Description=Refugee Manager Serial Communication Server
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/opt/hamamatsu-pc/refugee_manager/tools/com_server
+ExecStart=/usr/local/rbenv/shims/bundle exec ruby /opt/hamamatsu-pc/refugee_manager/tools/com_server/com_server.rb
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target

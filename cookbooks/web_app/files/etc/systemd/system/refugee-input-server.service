@@ -1,0 +1,13 @@
+[Unit]
+Description=Refugee Manager Input Device Server
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/opt/hamamatsu-pc/refugee_manager/tools/input_server
+ExecStart=/usr/local/rbenv/shims/bundle exec ruby /opt/hamamatsu-pc/refugee_manager/tools/input_server/input_server.rb
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target

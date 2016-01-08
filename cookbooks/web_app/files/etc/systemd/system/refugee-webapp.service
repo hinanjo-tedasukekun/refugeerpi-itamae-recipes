@@ -1,0 +1,13 @@
+[Unit]
+Description=Refugee Manager Web Application Server
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/opt/hamamatsu-pc/refugee_manager
+ExecStart=/usr/local/rbenv/shims/bundle exec unicorn -E staging -c /opt/hamamatsu-pc/refugee_manager/config/unicorn.conf.rb
+
+[Install]
+WantedBy=multi-user.target
