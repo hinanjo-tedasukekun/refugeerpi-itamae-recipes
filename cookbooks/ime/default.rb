@@ -1,3 +1,5 @@
 # 日本語入力関連レシピ
 
-package 'ibus-anthy'
+package 'dbus-x11'
+package 'fcitx'
+package 'fcitx-anthy'
