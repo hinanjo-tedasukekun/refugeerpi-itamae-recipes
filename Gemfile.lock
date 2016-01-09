@@ -3,6 +3,7 @@ GEM
   specs:
     ansi (1.5.0)
     hashie (3.4.3)
+    highline (1.7.8)
     itamae (1.6.3)
       ansi
       hashie
@@ -27,6 +28,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  highline
   itamae
   rake
   specinfra (~> 2.44)
