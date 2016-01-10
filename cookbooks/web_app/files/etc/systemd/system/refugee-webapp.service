@@ -1,6 +1,5 @@
 [Unit]
 Description=Refugee Manager Web Application Server
-After=network.target
 
 [Service]
 Type=simple
@@ -8,6 +7,12 @@ User=root
 Group=root
 WorkingDirectory=/opt/hamamatsu-pc/refugee_manager
 ExecStart=/usr/local/rbenv/shims/bundle exec unicorn -E staging -c /opt/hamamatsu-pc/refugee_manager/config/unicorn.conf.rb
+ExecReload=/bin/kill -HUP $MAINPID
+KillSignal=SIGQUIT
+
+# This is based on the Unicorn::Configurator#timeout directive,
+# adding a few seconds for scheduling differences:
+TimeoutStopSec=62
 
 [Install]
 WantedBy=multi-user.target
