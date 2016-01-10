@@ -116,3 +116,5 @@ if ! shopt -oq posix; then
 fi
 
 alias be='bundle exec'
+
+/DietPi/dietpi/login
