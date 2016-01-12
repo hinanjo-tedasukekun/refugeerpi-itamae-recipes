@@ -1,0 +1,9 @@
+[Unit]
+Description=Turn on Power LED
+
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/power_led_on
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+GPIO_NUM=18
+GPIO="/sys/class/gpio/gpio${GPIO_NUM}"
+
+# GPIO のポートを使うための宣言
+echo $GPIO_NUM > /sys/class/gpio/export
+# 出力に設定する
+echo out > $GPIO/direction
+
+while true; do
+  # 出力 HIGH
+  echo 1 > $GPIO/value
+  sleep 1
+done
