@@ -6,6 +6,7 @@ Type=simple
 User=root
 Group=root
 WorkingDirectory=/opt/hamamatsu-pc/refugee_manager
+ExecStartPre=/bin/rm -f /opt/hamamatsu-pc/refugee_manager/shared/pids/unicorn.pid
 ExecStart=/usr/local/rbenv/shims/bundle exec unicorn -E staging -c /opt/hamamatsu-pc/refugee_manager/config/unicorn.conf.rb
 ExecReload=/bin/kill -HUP $MAINPID
 KillSignal=SIGQUIT
