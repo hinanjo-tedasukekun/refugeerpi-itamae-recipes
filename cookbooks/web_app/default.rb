@@ -13,7 +13,19 @@ link '/etc/nginx/sites-enabled/refugee_manager' do
   to '../sites-available/refugee_manager'
 end
 
-remote_file '/etc/systemd/system/nginx.service'
-remote_file '/etc/systemd/system/refugee-webapp.service'
-remote_file '/etc/systemd/system/refugee-input-server.service'
-remote_file '/etc/systemd/system/refugee-com-server.service'
+
+services = %w(
+nginx
+refugee-webapp
+refugee-input-server
+refugee-com-server
+refugee-display-server
+)
+
+services.each do |s|
+  remote_file "/etc/systemd/system/#{s}.service"
+
+  service s do
+    action :enable
+  end
+end

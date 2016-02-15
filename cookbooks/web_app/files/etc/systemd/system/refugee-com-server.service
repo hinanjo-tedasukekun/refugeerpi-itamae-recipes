@@ -6,7 +6,7 @@ Type=simple
 User=root
 Group=root
 WorkingDirectory=/opt/hamamatsu-pc/refugee_manager/tools/com_server
-ExecStart=/usr/local/rbenv/shims/bundle exec ruby /opt/hamamatsu-pc/refugee_manager/tools/com_server/com_server.rb
+ExecStart=/usr/local/rbenv/shims/bundle exec rails runner tools/com_server/com_server.rb
 KillSignal=SIGTERM
 
 [Install]

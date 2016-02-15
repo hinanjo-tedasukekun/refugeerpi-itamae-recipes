@@ -1,0 +1,13 @@
+[Unit]
+Description=Refugee Manager Display Server
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/opt/hamamatsu-pc/refugee_manager/tools/display_server
+ExecStart=/usr/local/rbenv/shims/bundle exec rails runner tools/display_server/display_server.rb
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target
