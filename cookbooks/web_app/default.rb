@@ -20,6 +20,7 @@ refugee-webapp
 refugee-input-server
 refugee-com-server
 refugee-display-server
+shelter-dashboard
 )
 
 services.each do |s|

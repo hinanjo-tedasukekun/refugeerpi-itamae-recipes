@@ -1,0 +1,12 @@
+[Unit]
+Description=Shelter Dashboard
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/opt/hamamatsu-pc/shelter_dashboard
+ExecStart=/usr/local/rbenv/shims/bundle exec dashing start
+
+[Install]
+WantedBy=multi-user.target
